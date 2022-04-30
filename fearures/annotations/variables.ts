@@ -36,3 +36,10 @@ const logNumber: (i: number) => void = (i: number) => {
 // bananas = 2;
 // if declaration and initialization are at the same line, Typescript will use type inference for us.
 let bananas = 2;
+
+// Wnen to use annotations?
+// 1) Function that returns the 'any' type
+const json = '{ "x": 10, "y": 20 }';
+// const coordinates = JSON.parse(json); // mouseover coordinates see 'any'
+const coordinates: { x: number; y: number } = JSON.parse(json); // mouseover coordinates
+console.log(coordinates);
