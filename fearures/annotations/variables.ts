@@ -29,3 +29,10 @@ const logNumber: (i: number) => void = (i: number) => {
 // types:
 // 1. primitive types: number, boolean, void, undefined, string, symbol, null
 // 2. object types: functions, array, classes, objects
+
+// --- Understanding type inference ---
+
+// let bananas;
+// bananas = 2;
+// if declaration and initialization are at the same line, Typescript will use type inference for us.
+let bananas = 2;
