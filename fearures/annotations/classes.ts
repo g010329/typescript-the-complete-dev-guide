@@ -6,13 +6,20 @@
 // protected: this method can be called by other methods in this class, or by other method in child classes(we can't change modifier in child class)
 
 class Vehicle {
+  // color: string;
+  // constructor(color: string) {
+  //   this.color = color;
+  // }
+  constructor(public color: string) {}
+
   protected honk(): void {
     console.log("beep");
   }
 }
 
-// const vehicle = new Vehicle();
+const vehicle = new Vehicle("orange");
 // vehicle.honk();
+console.log(vehicle.color);
 
 class Car extends Vehicle {
   private drive(): void {
@@ -25,6 +32,6 @@ class Car extends Vehicle {
   }
 }
 
-const car = new Car();
-car.startDrivingProcess();
-car.honk();
+// const car = new Car();
+// car.startDrivingProcess();
+// car.honk();
