@@ -1,1 +1,4 @@
 /maps/dist
+
+*node_modules
+*build
