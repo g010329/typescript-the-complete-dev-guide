@@ -1,5 +1,4 @@
-import { Todo, FetchedTodosAction } from "../actions";
-import { ActionTypes } from "../actions/types";
+import { Todo, FetchedTodosAction, ActionTypes } from "../actions";
 
 // state:Todo[] => state 的型別是含 Todo 的 Array
 // =[] => 初始值是空 Array
