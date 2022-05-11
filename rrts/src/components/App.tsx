@@ -5,7 +5,8 @@ import { StoreState } from "../reducers";
 
 interface AppProps {
   todos: Todo[];
-  fetchTodos: typeof fetchTodos;
+  fetchTodos: Function;
+  // fetchTodos: typeof fetchTodos; //redux-thunk type action creator
   deleteTodo: typeof deleteTodo;
 }
 
