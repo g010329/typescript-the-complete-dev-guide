@@ -1,5 +1,22 @@
 import React from "react";
+import { connect } from "react-redux";
+import { Todo, fetchTodos } from "../actions";
+import { StoreState } from "../reducers";
 
-export const App = () => {
-  return <div>123</div>;
+interface AppProps {
+  todos: Todo[];
+  fetchTodos(): any;
+}
+
+class _App extends React.Component<AppProps> {
+  render() {
+    return <div>123</div>;
+  }
+}
+
+const mapStateToProps = ({ todos }: StoreState): { todos: Todo[] } => {
+  return { todos };
 };
+
+export const App = connect(mapStateToProps, { fetchTodos })(_App);
+// ts 盡量不寫 export default
